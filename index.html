@@ -3,61 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Clean and modern portfolio website for Ishan Makkar, Rutgers CS & DS graduate.">
+  <meta name="description" content="Modern portfolio site for Ishan Makkar, CS & DS graduate.">
   <title>Ishan Makkar | Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     html {
       scroll-behavior: smooth;
     }
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .fade-in {
+      animation: fadeIn 1s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
   </style>
 </head>
-<body class="bg-white text-gray-800 font-sans">
+<body class="bg-gray-50 text-gray-800">
 
   <!-- Header -->
   <header class="bg-white shadow-sm sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-semibold">Ishan Makkar</h1>
+      <h1 class="text-2xl font-bold text-blue-700">Ishan Makkar</h1>
       <nav>
         <ul class="flex space-x-6 text-sm font-medium">
-          <li><a href="#about" class="hover:text-blue-600">About</a></li>
-          <li><a href="#experience" class="hover:text-blue-600">Experience</a></li>
-          <li><a href="#projects" class="hover:text-blue-600">Projects</a></li>
-          <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
+          <li><a href="#about" class="hover:text-blue-600 transition">About</a></li>
+          <li><a href="#experience" class="hover:text-blue-600 transition">Experience</a></li>
+          <li><a href="#projects" class="hover:text-blue-600 transition">Projects</a></li>
+          <li><a href="#contact" class="hover:text-blue-600 transition">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <!-- Hero Section -->
-  <section class="text-center py-24 bg-gradient-to-b from-blue-50 to-white">
+  <section class="text-center py-32 bg-gradient-to-br from-blue-100 to-white fade-in">
     <div class="max-w-3xl mx-auto px-4">
-      <h2 class="text-4xl md:text-5xl font-bold mb-6">Hi, I'm Ishan</h2>
-      <p class="text-lg md:text-xl text-gray-600">Computer Science & Data Science graduate from Rutgers. I specialize in building clean digital products and using data to drive better decisions.</p>
+      <img src="https://avatars.githubusercontent.com/u/yourGithubID" alt="Profile" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg">
+      <h2 class="text-5xl font-extrabold mb-4">Hi, I'm Ishan</h2>
+      <p class="text-lg text-gray-700">CS & DS graduate from Rutgers. I build clean digital products and use data to drive smart decisions.</p>
+      <a href="#projects" class="inline-block mt-6 px-6 py-3 bg-blue-600 text-white font-medium rounded-xl hover:bg-blue-700 transition">View My Work</a>
     </div>
   </section>
 
   <!-- About -->
-  <section id="about" class="max-w-4xl mx-auto px-6 py-20">
-    <h2 class="text-3xl font-bold mb-6 text-center">About Me</h2>
+  <section id="about" class="max-w-4xl mx-auto px-6 py-20 fade-in">
+    <h2 class="text-3xl font-bold text-center mb-6">About Me</h2>
     <p class="text-lg text-gray-700 leading-relaxed text-center">
-      I'm a recent graduate from Rutgers University with a double major in Computer Science and Data Science, plus a Statistics minor. I love solving problems with code, analyzing real-world data, and leading teams. Whether building dashboards at BetMGM, mentoring high school robotics, or racing with the Formula team, I thrive at the intersection of people, data, and technology.
+      I'm a Rutgers University graduate (CS + DS, Stats minor). I love solving real-world problems using data, code, and product thinking. Whether building BI dashboards at BetMGM or analyzing car telemetry in Formula Racing, I thrive where data meets impact.
     </p>
   </section>
 
   <!-- Experience -->
-  <section id="experience" class="bg-gray-50 py-20">
+  <section id="experience" class="bg-white py-20 fade-in">
     <div class="max-w-4xl mx-auto px-6">
-      <h2 class="text-3xl font-bold mb-10 text-center">Experience</h2>
+      <h2 class="text-3xl font-bold text-center mb-10">Experience</h2>
       <div class="space-y-8">
-        <div class="border-l-4 border-blue-600 pl-4">
+        <div class="bg-gray-100 p-6 rounded-lg border-l-4 border-blue-600 shadow-sm">
           <h3 class="text-xl font-semibold">Product Management Intern @ BetMGM</h3>
           <p class="text-sm text-gray-500">May 2024 – Aug. 2024 · Jersey City, NJ</p>
-          <ul class="list-disc list-inside mt-2 text-gray-700">
-            <li>Streamlined MFA workflows by enhancing authentication APIs</li>
-            <li>Built Power BI dashboards to monitor user behavior in account settings</li>
-            <li>Collaborated with UX and engineering to resolve pain points</li>
-            <li>Conducted competitive research on reward systems</li>
+          <ul class="list-disc list-inside mt-3 text-gray-700">
+            <li>Streamlined MFA authentication workflows via API improvements</li>
+            <li>Created Power BI dashboards for deposit success & feature usage</li>
+            <li>Partnered with UX & engineering to reduce user pain points</li>
+            <li>Researched industry reward systems for product enhancements</li>
           </ul>
         </div>
       </div>
@@ -65,29 +80,30 @@
   </section>
 
   <!-- Projects -->
-  <section id="projects" class="py-20">
-    <div class="max-w-4xl mx-auto px-6">
-      <h2 class="text-3xl font-bold mb-10 text-center">Projects</h2>
-      <div class="grid md:grid-cols-2 gap-10">
-        <div class="bg-white p-6 rounded-lg shadow-sm border">
+  <section id="projects" class="py-20 bg-gray-50 fade-in">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-10">Projects</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition border">
           <h3 class="text-xl font-semibold mb-2">Facial Recognition Audit AI</h3>
-          <p class="text-gray-700">Audited 1,000+ images using DeepFace and FairFace to identify bias in predictions. Used Python, Pandas, Seaborn to analyze and visualize model fairness.</p>
+          <p class="text-gray-700">Audited bias in 1,000+ images using DeepFace, FairFace. Built visualizations with Python, Seaborn, Pandas to evaluate model fairness.</p>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow-sm border">
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition border">
           <h3 class="text-xl font-semibold mb-2">Financial Default Risk Classifier</h3>
-          <p class="text-gray-700">Simulated financial risk scenarios using ISLR and machine learning models like SVM, LDA, and Logistic Regression. Used R packages like glmnet and pROC for analysis.</p>
+          <p class="text-gray-700">Simulated loan risk scenarios with SVM, LDA, Logistic Regression in R. Used glmnet, caret, pROC to visualize ROC curves and model performance.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="bg-blue-100 py-20">
+  <section id="contact" class="bg-blue-600 py-20 text-white fade-in">
     <div class="max-w-3xl mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold mb-6">Get in Touch</h2>
-      <p class="text-lg text-gray-700 mb-4">I'm open to job opportunities, collaboration, or even just a quick chat. Let's connect!</p>
-      <p class="text-lg">📧 <a href="mailto:imakk913@gmail.com" class="text-blue-600">imakk913@gmail.com</a></p>
+      <h2 class="text-3xl font-bold mb-4">Get in Touch</h2>
+      <p class="text-lg mb-4">Interested in working together? Let’s connect!</p>
+      <p class="text-lg">📧 <a href="mailto:imakk913@gmail.com" class="underline hover:text-blue-200">imakk913@gmail.com</a></p>
       <p class="text-lg">📞 908-952-3727</p>
+      <a href="https://github.com/ishanmakkar09" target="_blank" class="inline-block mt-6 px-5 py-2 border border-white rounded-full hover:bg-white hover:text-blue-600 transition">View GitHub</a>
     </div>
   </section>
 
